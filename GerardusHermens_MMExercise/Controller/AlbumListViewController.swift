@@ -12,12 +12,20 @@ import Alamofire
 
 class AlbumListViewController: UIViewController {
     
-
-    @IBOutlet weak var albumTableView: UITableView!
+    //variables and arrays
+    
+    //url fetching data from web
     let albumURL = "https://jsonplaceholder.typicode.com/albums"
+    
+    //variable used for segue to PhotoListViewController
+    var albumIdForPhotolistVCSegue : Int = 0
+    
+    // 2 arrays to store web data fetched via JSON
     var albumIdArray = [Int]()
     var albumTitleArray = [String]()
-    var albumForPhotolistVC : Int = 0
+
+    //IBOutlets
+    @IBOutlet weak var albumTableView: UITableView!
     
     
     override func viewDidLoad() {
@@ -27,11 +35,13 @@ class AlbumListViewController: UIViewController {
     }
     
     
+    //function that calls webrequest function
     func fetchAlbumsByIds() {
         
         getAlbumData(url: albumURL)
     }
     
+    //function for fetching data from web using Alamofire (cocoapod)
     func getAlbumData(url: String) {
         
         Alamofire.request(url, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil).responseJSON {
@@ -47,6 +57,7 @@ class AlbumListViewController: UIViewController {
         }
     }
     
+    //function to store necessary JSON data in arrays
     func createAlbumArrays(json: JSON) {
         
         for idAndTitle in 0..<json[].count {
@@ -63,13 +74,22 @@ class AlbumListViewController: UIViewController {
     
     // MARK: - Navigation
 
+    // function for segue preparation for PhotoListViewController
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        
+        if segue.identifier == "segueWithAlbumId" {
+            
+            let photoListVC = segue.destination as! PhotoListViewController
+            photoListVC.albumIdFromSegue = albumIdForPhotolistVCSegue + 1
+            
+            print(photoListVC.albumIdFromSegue)
+        }
     }
 
 }
 
+
+//extension that contains all tableview related functions
 extension AlbumListViewController : UITableViewDataSource, UITableViewDelegate {
     
     
@@ -84,6 +104,13 @@ extension AlbumListViewController : UITableViewDataSource, UITableViewDelegate {
         cell.albumTitleLabel.text = albumTitleArray[indexPath.row]
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        albumIdForPhotolistVCSegue = indexPath.row
+        performSegue(withIdentifier: "segueWithAlbumId", sender: self)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 

@@ -10,6 +10,8 @@ import UIKit
 
 class PhotoListViewController: UIViewController {
 
+    var albumIdFromSegue : Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

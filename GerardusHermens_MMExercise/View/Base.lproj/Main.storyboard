@@ -82,6 +82,7 @@
                     </view>
                     <connections>
                         <outlet property="albumTableView" destination="TPn-n2-3zE" id="Qfd-97-T7F"/>
+                        <segue destination="PxU-rX-msk" kind="show" identifier="segueWithAlbumId" id="Lu6-6s-pbH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pjU-Hb-SSw" userLabel="First Responder" sceneMemberID="firstResponder"/>
