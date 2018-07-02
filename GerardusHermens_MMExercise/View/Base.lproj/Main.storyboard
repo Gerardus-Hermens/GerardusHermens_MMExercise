@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="U4Y-6O-jpH">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,13 +19,74 @@
                     <view key="view" contentMode="scaleToFill" id="Wtj-Ir-lVB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TPn-n2-3zE">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="albumcell" rowHeight="100" id="R9D-Wo-Acl" customClass="AlbumListTableViewCell" customModule="GerardusHermens_MMExercise" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="R9D-Wo-Acl" id="L2c-qn-J24">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GX5-qj-jAb">
+                                                    <rect key="frame" x="15" y="11" width="345" height="78"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XIl-iy-YT5">
+                                                            <rect key="frame" x="0.0" y="0.0" width="69" height="78"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="40"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B8L-M7-VJ4">
+                                                            <rect key="frame" x="69" y="0.0" width="276" height="78"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="40"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="B8L-M7-VJ4" firstAttribute="width" secondItem="XIl-iy-YT5" secondAttribute="width" multiplier="4" id="dXl-XP-sDf"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="GX5-qj-jAb" firstAttribute="leading" secondItem="L2c-qn-J24" secondAttribute="leadingMargin" id="3hF-cS-O4u"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="GX5-qj-jAb" secondAttribute="trailing" id="EhF-k0-dzW"/>
+                                                <constraint firstItem="GX5-qj-jAb" firstAttribute="top" secondItem="L2c-qn-J24" secondAttribute="topMargin" id="RsP-bs-FRt"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="GX5-qj-jAb" secondAttribute="bottom" id="THk-cA-PhT"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="albumIdLabel" destination="XIl-iy-YT5" id="LxJ-H5-29W"/>
+                                            <outlet property="albumTitleLabel" destination="B8L-M7-VJ4" id="xbK-m6-1Ja"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="U4Y-6O-jpH" id="KUg-UK-ucA"/>
+                                    <outlet property="delegate" destination="U4Y-6O-jpH" id="Ht6-8v-QKZ"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FWH-OY-clo" firstAttribute="trailing" secondItem="TPn-n2-3zE" secondAttribute="trailing" id="K2O-AD-bIO"/>
+                            <constraint firstItem="TPn-n2-3zE" firstAttribute="leading" secondItem="FWH-OY-clo" secondAttribute="leading" id="bJB-vJ-u3I"/>
+                            <constraint firstItem="TPn-n2-3zE" firstAttribute="top" secondItem="FWH-OY-clo" secondAttribute="top" id="gLH-23-4A6"/>
+                            <constraint firstItem="FWH-OY-clo" firstAttribute="bottom" secondItem="TPn-n2-3zE" secondAttribute="bottom" id="voL-a3-Zg4"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="FWH-OY-clo"/>
                     </view>
+                    <connections>
+                        <outlet property="albumTableView" destination="TPn-n2-3zE" id="Qfd-97-T7F"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pjU-Hb-SSw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="34" y="127"/>
+            <point key="canvasLocation" x="32.799999999999997" y="126.38680659670166"/>
         </scene>
         <!--Photo List View Controller-->
         <scene sceneID="Fta-Xn-ceN">

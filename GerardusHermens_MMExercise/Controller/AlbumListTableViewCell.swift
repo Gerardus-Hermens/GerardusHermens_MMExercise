@@ -10,6 +10,10 @@ import UIKit
 
 class AlbumListTableViewCell: UITableViewCell {
 
+    
+    @IBOutlet weak var albumIdLabel: UILabel!
+    @IBOutlet weak var albumTitleLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -1,0 +1,6 @@
+framework module Pods_GerardusHermens_MMExercise {
+  umbrella header "Pods-GerardusHermens_MMExercise-umbrella.h"
+
+  export *
+  module * { export * }
+}
