@@ -26,6 +26,8 @@ class PhotoDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.navigationItem.title = "Details"
+        
         print("\(albumId) - \(photoId) - \(photoTitle) - \(photoURL)")
         
         photoImage.layer.cornerRadius = photoImage.bounds.width / 10

@@ -22,6 +22,8 @@ class PhotoListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.navigationItem.title = "Photos"
+        
         print(albumIdFromSegue)
         
         let cellSize = UIScreen.main.bounds.width / 3 - 5
