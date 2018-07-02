@@ -10,4 +10,5 @@ import UIKit
 
 class PhotoListCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var tumbnailImage: UIImageView!
 }
