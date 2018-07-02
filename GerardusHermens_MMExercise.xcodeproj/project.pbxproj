@@ -8,22 +8,36 @@
 
 /* Begin PBXBuildFile section */
 		4C18102420EA878E0004BBED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C18102320EA878E0004BBED /* AppDelegate.swift */; };
-		4C18102620EA878E0004BBED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C18102520EA878E0004BBED /* ViewController.swift */; };
 		4C18102920EA878E0004BBED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C18102720EA878E0004BBED /* Main.storyboard */; };
 		4C18102C20EA878E0004BBED /* GerardusHermens_MMExercise.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4C18102A20EA878E0004BBED /* GerardusHermens_MMExercise.xcdatamodeld */; };
 		4C18102E20EA878E0004BBED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C18102D20EA878E0004BBED /* Assets.xcassets */; };
 		4C18103120EA878E0004BBED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C18102F20EA878E0004BBED /* LaunchScreen.storyboard */; };
+		4CC679F220EA8CE6009241B7 /* PhotoListDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC679F120EA8CE6009241B7 /* PhotoListDataModel.swift */; };
+		4CC679F420EA8D02009241B7 /* AlbumListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC679F320EA8D02009241B7 /* AlbumListViewController.swift */; };
+		4CC679F620EA8D16009241B7 /* PhotoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC679F520EA8D16009241B7 /* PhotoListViewController.swift */; };
+		4CC679F820EA8D34009241B7 /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC679F720EA8D34009241B7 /* PhotoDetailViewController.swift */; };
+		4CC679FA20EA8D5E009241B7 /* AlbumListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC679F920EA8D5E009241B7 /* AlbumListTableViewCell.swift */; };
+		4CC679FC20EA8D91009241B7 /* PhotoListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC679FB20EA8D91009241B7 /* PhotoListCollectionViewCell.swift */; };
+		EC3C98A65B98D95B858E2909 /* Pods_GerardusHermens_MMExercise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10BA1F6B0B28A58A6C928AB7 /* Pods_GerardusHermens_MMExercise.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		10BA1F6B0B28A58A6C928AB7 /* Pods_GerardusHermens_MMExercise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GerardusHermens_MMExercise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C18102020EA878E0004BBED /* GerardusHermens_MMExercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GerardusHermens_MMExercise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C18102320EA878E0004BBED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4C18102520EA878E0004BBED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4C18102820EA878E0004BBED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4C18102B20EA878E0004BBED /* GerardusHermens_MMExercise.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GerardusHermens_MMExercise.xcdatamodel; sourceTree = "<group>"; };
 		4C18102D20EA878E0004BBED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C18103020EA878E0004BBED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4C18103220EA878E0004BBED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4CC679F120EA8CE6009241B7 /* PhotoListDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListDataModel.swift; sourceTree = "<group>"; };
+		4CC679F320EA8D02009241B7 /* AlbumListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListViewController.swift; sourceTree = "<group>"; };
+		4CC679F520EA8D16009241B7 /* PhotoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListViewController.swift; sourceTree = "<group>"; };
+		4CC679F720EA8D34009241B7 /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
+		4CC679F920EA8D5E009241B7 /* AlbumListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListTableViewCell.swift; sourceTree = "<group>"; };
+		4CC679FB20EA8D91009241B7 /* PhotoListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListCollectionViewCell.swift; sourceTree = "<group>"; };
+		668386F24EA0C060BA265637 /* Pods-GerardusHermens_MMExercise.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GerardusHermens_MMExercise.release.xcconfig"; path = "Pods/Target Support Files/Pods-GerardusHermens_MMExercise/Pods-GerardusHermens_MMExercise.release.xcconfig"; sourceTree = "<group>"; };
+		A0D32CCAB0569E5FD54DEFB4 /* Pods-GerardusHermens_MMExercise.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GerardusHermens_MMExercise.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GerardusHermens_MMExercise/Pods-GerardusHermens_MMExercise.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC3C98A65B98D95B858E2909 /* Pods_GerardusHermens_MMExercise.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +57,8 @@
 			children = (
 				4C18102220EA878E0004BBED /* GerardusHermens_MMExercise */,
 				4C18102120EA878E0004BBED /* Products */,
+				A5903CCD304894A7A8132D6F /* Pods */,
+				7DEE3DFC1A499AADF25AA9D7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +73,61 @@
 		4C18102220EA878E0004BBED /* GerardusHermens_MMExercise */ = {
 			isa = PBXGroup;
 			children = (
+				4CC679F020EA8CC4009241B7 /* Controller */,
+				4CC679EF20EA8CB6009241B7 /* View */,
+				4CC679EE20EA8CA5009241B7 /* Model */,
 				4C18102320EA878E0004BBED /* AppDelegate.swift */,
-				4C18102520EA878E0004BBED /* ViewController.swift */,
-				4C18102720EA878E0004BBED /* Main.storyboard */,
 				4C18102D20EA878E0004BBED /* Assets.xcassets */,
 				4C18102F20EA878E0004BBED /* LaunchScreen.storyboard */,
 				4C18103220EA878E0004BBED /* Info.plist */,
 				4C18102A20EA878E0004BBED /* GerardusHermens_MMExercise.xcdatamodeld */,
 			);
 			path = GerardusHermens_MMExercise;
+			sourceTree = "<group>";
+		};
+		4CC679EE20EA8CA5009241B7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4CC679F120EA8CE6009241B7 /* PhotoListDataModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4CC679EF20EA8CB6009241B7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4C18102720EA878E0004BBED /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4CC679F020EA8CC4009241B7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4CC679F320EA8D02009241B7 /* AlbumListViewController.swift */,
+				4CC679F520EA8D16009241B7 /* PhotoListViewController.swift */,
+				4CC679F720EA8D34009241B7 /* PhotoDetailViewController.swift */,
+				4CC679F920EA8D5E009241B7 /* AlbumListTableViewCell.swift */,
+				4CC679FB20EA8D91009241B7 /* PhotoListCollectionViewCell.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		7DEE3DFC1A499AADF25AA9D7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				10BA1F6B0B28A58A6C928AB7 /* Pods_GerardusHermens_MMExercise.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A5903CCD304894A7A8132D6F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A0D32CCAB0569E5FD54DEFB4 /* Pods-GerardusHermens_MMExercise.debug.xcconfig */,
+				668386F24EA0C060BA265637 /* Pods-GerardusHermens_MMExercise.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +137,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4C18103520EA878E0004BBED /* Build configuration list for PBXNativeTarget "GerardusHermens_MMExercise" */;
 			buildPhases = (
+				B515E9509492754D5A299766 /* [CP] Check Pods Manifest.lock */,
 				4C18101C20EA878E0004BBED /* Sources */,
 				4C18101D20EA878E0004BBED /* Frameworks */,
 				4C18101E20EA878E0004BBED /* Resources */,
+				C973D001BD8D25C6957778DB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,13 +198,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B515E9509492754D5A299766 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GerardusHermens_MMExercise-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C973D001BD8D25C6957778DB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GerardusHermens_MMExercise/Pods-GerardusHermens_MMExercise-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GerardusHermens_MMExercise/Pods-GerardusHermens_MMExercise-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4C18101C20EA878E0004BBED /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C18102620EA878E0004BBED /* ViewController.swift in Sources */,
+				4CC679FA20EA8D5E009241B7 /* AlbumListTableViewCell.swift in Sources */,
+				4CC679F820EA8D34009241B7 /* PhotoDetailViewController.swift in Sources */,
+				4CC679F620EA8D16009241B7 /* PhotoListViewController.swift in Sources */,
+				4CC679FC20EA8D91009241B7 /* PhotoListCollectionViewCell.swift in Sources */,
+				4CC679F420EA8D02009241B7 /* AlbumListViewController.swift in Sources */,
 				4C18102C20EA878E0004BBED /* GerardusHermens_MMExercise.xcdatamodeld in Sources */,
+				4CC679F220EA8CE6009241B7 /* PhotoListDataModel.swift in Sources */,
 				4C18102420EA878E0004BBED /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,6 +393,7 @@
 		};
 		4C18103620EA878E0004BBED /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0D32CCAB0569E5FD54DEFB4 /* Pods-GerardusHermens_MMExercise.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +412,7 @@
 		};
 		4C18103720EA878E0004BBED /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 668386F24EA0C060BA265637 /* Pods-GerardusHermens_MMExercise.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
