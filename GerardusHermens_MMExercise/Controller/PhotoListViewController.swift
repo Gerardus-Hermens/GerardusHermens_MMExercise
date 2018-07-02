@@ -15,7 +15,6 @@ class PhotoListViewController: UIViewController {
     var albumIdFromSegue : Int = 0
     let photoListDM = PhotoListDataModel()
     let photoListURL = "https://jsonplaceholder.typicode.com/photos"
-    var data : Data?
     
     @IBOutlet weak var photoListCollectionView: UICollectionView!
     
@@ -108,7 +107,7 @@ extension PhotoListViewController : UICollectionViewDelegate, UICollectionViewDa
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoCell", for: indexPath) as! PhotoListCollectionViewCell
         
-        cell.tumbnailImage.image = photoListDM.thumbnailImageArray[indexPath.row]
+        cell.thumbnailImage.image = photoListDM.thumbnailImageArray[indexPath.row]
         
         return cell
     }

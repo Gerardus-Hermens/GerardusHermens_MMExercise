@@ -126,7 +126,7 @@
                                             <constraint firstItem="1LJ-Gc-cfu" firstAttribute="leading" secondItem="SZh-B0-Fif" secondAttribute="leading" id="vAR-IO-ePB"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="tumbnailImage" destination="1LJ-Gc-cfu" id="Cc9-fY-2vp"/>
+                                            <outlet property="thumbnailImage" destination="1LJ-Gc-cfu" id="YZx-OA-YHc"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

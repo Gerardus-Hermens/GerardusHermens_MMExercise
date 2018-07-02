@@ -12,7 +12,6 @@ class PhotoDetailViewController: UIViewController {
     
     let photoDetailDM = PhotoListDataModel()
     
-    var photoDetailImage : UIImage?
     var photoURL : String = ""
     var photoTitle : String = ""
     var albumId : String = ""
@@ -28,5 +27,13 @@ class PhotoDetailViewController: UIViewController {
         super.viewDidLoad()
 
         print("\(albumId) - \(photoId) - \(photoTitle) - \(photoURL)")
+        
+        photoImage.layer.cornerRadius = photoImage.bounds.width / 10
+        photoImage.clipsToBounds = true
+        
+        photoImage.image = photoDetailDM.getImageByURL(imageURLString: photoURL)
+        titleLabel.text = "title: \(photoTitle)"
+        albumIdLabel.text = "album: \(albumId)"
+        photoIdLabel.text = "photo: \(photoId)"
     }
 }

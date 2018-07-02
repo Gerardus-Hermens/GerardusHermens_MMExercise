@@ -10,5 +10,12 @@ import UIKit
 
 class PhotoListCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var tumbnailImage: UIImageView!
+    @IBOutlet weak var thumbnailImage: UIImageView!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        thumbnailImage.layer.cornerRadius = thumbnailImage.bounds.width / 10
+        thumbnailImage.clipsToBounds = true
+    }
 }
