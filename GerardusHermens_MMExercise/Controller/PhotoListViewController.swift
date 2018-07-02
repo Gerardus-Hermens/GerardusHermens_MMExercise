@@ -83,6 +83,15 @@ class PhotoListViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
+        if segue.identifier == "segueWithPhotoDetailData" {
+            
+            let photoDetailVC = segue.destination as! PhotoDetailViewController
+            
+            photoDetailVC.albumId = String(photoListDM.albumId)
+            photoDetailVC.photoId = String(photoListDM.photoId)
+            photoDetailVC.photoTitle = photoListDM.title
+            photoDetailVC.photoURL = photoListDM.photoURL
+        }
     }
 
 }
@@ -106,6 +115,12 @@ extension PhotoListViewController : UICollectionViewDelegate, UICollectionViewDa
     
     func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
         
+        photoListDM.albumId = photoListDM.albumIdArray[indexPath.row]
+        photoListDM.photoId = photoListDM.photoIdArray[indexPath.row]
+        photoListDM.title = photoListDM.titleArray[indexPath.row]
+        photoListDM.photoURL = photoListDM.photoURLArray[indexPath.row]
+        
+        performSegue(withIdentifier: "segueWithPhotoDetailData", sender: self)
         
         return true
     }

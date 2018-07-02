@@ -9,22 +9,24 @@
 import UIKit
 
 class PhotoDetailViewController: UIViewController {
-
+    
+    let photoDetailDM = PhotoListDataModel()
+    
+    var photoDetailImage : UIImage?
+    var photoURL : String = ""
+    var photoTitle : String = ""
+    var albumId : String = ""
+    var photoId : String = ""
+    
+    
+    @IBOutlet weak var photoImage: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var albumIdLabel: UILabel!
+    @IBOutlet weak var photoIdLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        print("\(albumId) - \(photoId) - \(photoTitle) - \(photoURL)")
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

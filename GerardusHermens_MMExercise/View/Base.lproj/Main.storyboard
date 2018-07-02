@@ -147,6 +147,7 @@
                     </view>
                     <connections>
                         <outlet property="photoListCollectionView" destination="Gmi-XA-rVg" id="63f-Ts-U0p"/>
+                        <segue destination="hW9-eF-x5i" kind="show" identifier="segueWithPhotoDetailData" id="qog-zH-VoY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HX9-3o-CRP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -160,9 +161,62 @@
                     <view key="view" contentMode="scaleToFill" id="dCF-zO-0jh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="RbY-tI-Lex">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="RaK-kx-C7D">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="404.5"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IX8-TD-DYj">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="404.5"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ETZ-PA-hr3">
+                                        <rect key="frame" x="0.0" y="404.5" width="375" height="242.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8ZE-fN-LgU">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="81"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="50"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="25z-oy-mox">
+                                                <rect key="frame" x="0.0" y="81" width="375" height="80.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="50"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rRL-yh-wpT">
+                                                <rect key="frame" x="0.0" y="161.5" width="375" height="81"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="50"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ETZ-PA-hr3" firstAttribute="height" secondItem="RaK-kx-C7D" secondAttribute="height" multiplier="0.6" id="WvR-QI-VFk"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="RbY-tI-Lex" firstAttribute="top" secondItem="74E-1K-nuF" secondAttribute="top" id="E6w-4e-JbF"/>
+                            <constraint firstItem="RbY-tI-Lex" firstAttribute="leading" secondItem="74E-1K-nuF" secondAttribute="leading" id="FtS-i0-Qcj"/>
+                            <constraint firstItem="74E-1K-nuF" firstAttribute="trailing" secondItem="RbY-tI-Lex" secondAttribute="trailing" id="XBS-ia-ZR1"/>
+                            <constraint firstItem="74E-1K-nuF" firstAttribute="bottom" secondItem="RbY-tI-Lex" secondAttribute="bottom" id="rG3-0T-KA6"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="74E-1K-nuF"/>
                     </view>
+                    <connections>
+                        <outlet property="albumIdLabel" destination="25z-oy-mox" id="XTl-gx-Iuj"/>
+                        <outlet property="photoIdLabel" destination="rRL-yh-wpT" id="iD3-5G-4uD"/>
+                        <outlet property="photoImage" destination="IX8-TD-DYj" id="V9D-4S-4og"/>
+                        <outlet property="titleLabel" destination="8ZE-fN-LgU" id="urq-9r-BmQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uNA-Pf-49u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
