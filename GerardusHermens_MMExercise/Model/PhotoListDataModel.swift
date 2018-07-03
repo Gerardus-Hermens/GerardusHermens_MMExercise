@@ -24,7 +24,6 @@ class PhotoListDataModel {
     var thumbnailURLArray = [String]()
     var photoURLArray = [String]()
     var thumbnailImageArray = [UIImage]()
-//    var imageCollectionArray = [UIImage]()
     
     
     func getImageByURL(imageURLString : String) -> UIImage {
