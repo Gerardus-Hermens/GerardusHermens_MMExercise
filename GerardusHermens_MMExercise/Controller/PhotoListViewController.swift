@@ -26,8 +26,9 @@ class PhotoListViewController: UIViewController {
         
         print(albumIdFromSegue)
         
-        let cellSize = UIScreen.main.bounds.width / 3 - 5
+        let cellSize = UIScreen.main.bounds.width / 3 - 7.5
         let layout = UICollectionViewFlowLayout()
+        layout.sectionInset = UIEdgeInsetsMake(5, 5, 5, 5  )
         layout.itemSize = CGSize(width: cellSize, height: cellSize)
         layout.minimumInteritemSpacing = 5
         layout.minimumLineSpacing = 5

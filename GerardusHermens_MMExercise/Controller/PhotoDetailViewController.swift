@@ -21,6 +21,7 @@ class PhotoDetailViewController: UIViewController {
     @IBOutlet weak var photoImage: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var albumIdLabel: UILabel!
+    @IBOutlet weak var photoURLLabel: UILabel!
     @IBOutlet weak var photoIdLabel: UILabel!
     
     override func viewDidLoad() {
@@ -34,7 +35,8 @@ class PhotoDetailViewController: UIViewController {
         photoImage.clipsToBounds = true
         
         photoImage.image = photoDetailDM.getImageByURL(imageURLString: photoURL)
-        titleLabel.text = "title: \(photoTitle)"
+        photoURLLabel.text = "\(photoURL)"
+        titleLabel.text = "\(photoTitle)"
         albumIdLabel.text = "album: \(albumId)"
         photoIdLabel.text = "photo: \(photoId)"
     }
