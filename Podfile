@@ -8,5 +8,6 @@ target 'GerardusHermens_MMExercise' do
 
     pod 'SwiftyJSON'
     pod 'Alamofire'
+    pod 'ProgressHUD'
 
 end

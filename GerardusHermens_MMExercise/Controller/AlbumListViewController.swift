@@ -59,7 +59,6 @@ class AlbumListViewController: UIViewController {
             response in
             
             if response.result.isSuccess {
-                print("data fetch successful :)")
                 let albumJSON : JSON = JSON(response.result.value!)
                 self.createAlbumArrays(json: albumJSON)
             } else {
@@ -75,8 +74,6 @@ class AlbumListViewController: UIViewController {
             
             albumIdArray.append(json[idAndTitle]["id"].intValue)
             albumTitleArray.append(json[idAndTitle]["title"].stringValue)
-            
-            print("\(albumIdArray.count) - \(albumTitleArray.count)")
         }
         
         albumTableView.reloadData()
@@ -92,8 +89,6 @@ class AlbumListViewController: UIViewController {
             
             let photoListVC = segue.destination as! PhotoListViewController
             photoListVC.albumIdFromSegue = albumIdForPhotolistVCSegue
-            
-            print(photoListVC.albumIdFromSegue)
         }
     }
 
@@ -140,7 +135,7 @@ extension AlbumListViewController : UITableViewDataSource, UITableViewDelegate {
         } else {
             albumIdForPhotolistVCSegue = albumIdArray[indexPath.row]
         }
-        print(albumTitleArray[indexPath.row])
+        
         performSegue(withIdentifier: "segueWithAlbumId", sender: self)
         tableView.deselectRow(at: indexPath, animated: true)
     }

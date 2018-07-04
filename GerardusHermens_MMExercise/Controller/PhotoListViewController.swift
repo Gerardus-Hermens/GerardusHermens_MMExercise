@@ -9,6 +9,7 @@
 import UIKit
 import SwiftyJSON
 import Alamofire
+import ProgressHUD
 
 class PhotoListViewController: UIViewController {
 
@@ -24,10 +25,9 @@ class PhotoListViewController: UIViewController {
 
         self.navigationItem.title = "Photos"
         
-        print(albumIdFromSegue)
-        
-        let cellSize = UIScreen.main.bounds.width / 3 - 5
+        let cellSize = UIScreen.main.bounds.width / 3 - 7.5
         let layout = UICollectionViewFlowLayout()
+        layout.sectionInset = UIEdgeInsetsMake(5, 5, 5, 5  )
         layout.itemSize = CGSize(width: cellSize, height: cellSize)
         layout.minimumInteritemSpacing = 5
         layout.minimumLineSpacing = 5
@@ -35,6 +35,7 @@ class PhotoListViewController: UIViewController {
         photoListCollectionView.collectionViewLayout = layout
         
         fetchPhotoListByAlbumIds()
+        ProgressHUD.show()
     }
     
     
@@ -48,7 +49,6 @@ class PhotoListViewController: UIViewController {
         Alamofire.request(url, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil).responseJSON {
             response in
             if response.result.isSuccess {
-                print("fetched photos successful :)")
                 let photoListJSON : JSON = JSON(response.result.value!)
                 self.createPhotoListArrays(json: photoListJSON, albumId: self.albumIdFromSegue)
             } else {
@@ -58,8 +58,6 @@ class PhotoListViewController: UIViewController {
     }
     
     func createPhotoListArrays(json : JSON, albumId : Int) {
-        
-        print(albumId)
         
         for album in 0..<json[].count {
             
@@ -76,6 +74,7 @@ class PhotoListViewController: UIViewController {
             }
         }
         
+        ProgressHUD.dismiss()
         photoListCollectionView.reloadData()
     }
 

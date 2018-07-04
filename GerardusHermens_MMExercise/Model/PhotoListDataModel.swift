@@ -28,8 +28,6 @@ class PhotoListDataModel {
     
     func getImageByURL(imageURLString : String) -> UIImage {
         
-        print(imageURLString)
-        
         let url = URL(string: imageURLString)
         if let data = try? Data(contentsOf: url!) {
             photoImage = UIImage(data: data)
