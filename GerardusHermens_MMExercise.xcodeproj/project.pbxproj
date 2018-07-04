@@ -12,6 +12,7 @@
 		4C18102C20EA878E0004BBED /* GerardusHermens_MMExercise.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4C18102A20EA878E0004BBED /* GerardusHermens_MMExercise.xcdatamodeld */; };
 		4C18102E20EA878E0004BBED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C18102D20EA878E0004BBED /* Assets.xcassets */; };
 		4C18103120EA878E0004BBED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C18102F20EA878E0004BBED /* LaunchScreen.storyboard */; };
+		4C51535720EC5899006F2EF5 /* GreatVibes-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C51535620EC5899006F2EF5 /* GreatVibes-Regular.ttf */; };
 		4CC679F220EA8CE6009241B7 /* PhotoListDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC679F120EA8CE6009241B7 /* PhotoListDataModel.swift */; };
 		4CC679F420EA8D02009241B7 /* AlbumListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC679F320EA8D02009241B7 /* AlbumListViewController.swift */; };
 		4CC679F620EA8D16009241B7 /* PhotoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC679F520EA8D16009241B7 /* PhotoListViewController.swift */; };
@@ -30,6 +31,7 @@
 		4C18102D20EA878E0004BBED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C18103020EA878E0004BBED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4C18103220EA878E0004BBED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C51535620EC5899006F2EF5 /* GreatVibes-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GreatVibes-Regular.ttf"; sourceTree = "<group>"; };
 		4CC679F120EA8CE6009241B7 /* PhotoListDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListDataModel.swift; sourceTree = "<group>"; };
 		4CC679F320EA8D02009241B7 /* AlbumListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListViewController.swift; sourceTree = "<group>"; };
 		4CC679F520EA8D16009241B7 /* PhotoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListViewController.swift; sourceTree = "<group>"; };
@@ -78,11 +80,20 @@
 				4CC679EE20EA8CA5009241B7 /* Model */,
 				4C18102320EA878E0004BBED /* AppDelegate.swift */,
 				4C18102D20EA878E0004BBED /* Assets.xcassets */,
+				4C51535520EC5887006F2EF5 /* Fonts */,
 				4C18102F20EA878E0004BBED /* LaunchScreen.storyboard */,
 				4C18103220EA878E0004BBED /* Info.plist */,
 				4C18102A20EA878E0004BBED /* GerardusHermens_MMExercise.xcdatamodeld */,
 			);
 			path = GerardusHermens_MMExercise;
+			sourceTree = "<group>";
+		};
+		4C51535520EC5887006F2EF5 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				4C51535620EC5899006F2EF5 /* GreatVibes-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		4CC679EE20EA8CA5009241B7 /* Model */ = {
@@ -191,6 +202,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C18103120EA878E0004BBED /* LaunchScreen.storyboard in Resources */,
+				4C51535720EC5899006F2EF5 /* GreatVibes-Regular.ttf in Resources */,
 				4C18102E20EA878E0004BBED /* Assets.xcassets in Resources */,
 				4C18102920EA878E0004BBED /* Main.storyboard in Resources */,
 			);
