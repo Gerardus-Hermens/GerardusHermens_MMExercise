@@ -17,19 +17,17 @@ class PhotoDetailViewController: UIViewController {
     var albumId : String = ""
     var photoId : String = ""
     
-    
     @IBOutlet weak var photoImage: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var albumIdLabel: UILabel!
     @IBOutlet weak var photoURLLabel: UILabel!
     @IBOutlet weak var photoIdLabel: UILabel!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.navigationItem.title = "Details"
-        
-        print("\(albumId) - \(photoId) - \(photoTitle) - \(photoURL)")
         
         photoImage.layer.cornerRadius = photoImage.bounds.width / 10
         photoImage.clipsToBounds = true
