@@ -14,7 +14,7 @@ class AlbumListViewController: UIViewController {
     
     //variables and arrays
     
-    //url fetching data from web
+    //url for fetching data from web
     let albumURL = "https://jsonplaceholder.typicode.com/albums"
     
     //new instance of AlbumListDataModel
@@ -73,8 +73,6 @@ class AlbumListViewController: UIViewController {
         albumTableView.reloadData()
     }
 
-    
-    // MARK: - Navigation
 
     // function for segue preparation for PhotoListViewController
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

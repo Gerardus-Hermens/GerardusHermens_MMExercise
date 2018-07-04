@@ -13,10 +13,16 @@ import ProgressHUD
 
 class PhotoListViewController: UIViewController {
 
+    //variable used to store data for segue to PhotoListViewController
     var albumIdFromSegue : Int = 0
+    
+    //new instance of PhotoListDataModel
     let photoListDM = PhotoListDataModel()
+    
+    //url for fetching data from web
     let photoListURL = "https://jsonplaceholder.typicode.com/photos"
     
+    //IBOutlets
     @IBOutlet weak var photoListCollectionView: UICollectionView!
     
     
@@ -24,6 +30,18 @@ class PhotoListViewController: UIViewController {
         super.viewDidLoad()
 
         self.navigationItem.title = "Photos"
+        
+        setCollectionViewDimensionProperties()
+        fetchPhotoListByAlbumIds()
+        
+        //cocoapod loading animation start when page is
+        //loaded and thumbnailURLs are still loading in
+        ProgressHUD.show()
+    }
+    
+    
+    //function to set collectionview and collectionviewcell properties
+    func setCollectionViewDimensionProperties() {
         
         let cellSize = UIScreen.main.bounds.width / 3 - 7.5
         let layout = UICollectionViewFlowLayout()
@@ -33,17 +51,15 @@ class PhotoListViewController: UIViewController {
         layout.minimumLineSpacing = 5
         
         photoListCollectionView.collectionViewLayout = layout
-        
-        fetchPhotoListByAlbumIds()
-        ProgressHUD.show()
     }
     
-    
+    //function that calls webrequest function
     func fetchPhotoListByAlbumIds() {
         
         getAlbumPhotos(url: photoListURL)
     }
     
+    //function for fetching data from web using Alamofire (cocoapod)
     func getAlbumPhotos(url: String) {
         
         Alamofire.request(url, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil).responseJSON {
@@ -57,6 +73,7 @@ class PhotoListViewController: UIViewController {
         }
     }
     
+    //function to store necessary JSON data in arrays
     func createPhotoListArrays(json : JSON, albumId : Int) {
         
         for album in 0..<json[].count {
@@ -74,13 +91,14 @@ class PhotoListViewController: UIViewController {
             }
         }
         
+        //cocoapod loading animation dismissal
         ProgressHUD.dismiss()
+        
         photoListCollectionView.reloadData()
     }
 
-    
-    // MARK: - Navigation
 
+    // function for segue preparation for PhotoDetailViewController
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "segueWithPhotoDetailData" {
@@ -96,7 +114,7 @@ class PhotoListViewController: UIViewController {
 
 }
 
-
+//extension that contains all collectionview related functions
 extension PhotoListViewController : UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

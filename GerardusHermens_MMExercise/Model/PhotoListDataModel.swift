@@ -11,6 +11,7 @@ import UIKit
 
 class PhotoListDataModel {
     
+    //variables
     var albumId : Int = 0
     var photoId : Int = 0
     var title : String = ""
@@ -18,6 +19,7 @@ class PhotoListDataModel {
     var photoURL : String = ""
     var photoImage : UIImage?
     
+    //arrays
     var albumIdArray = [Int]()
     var photoIdArray = [Int]()
     var titleArray = [String]()
@@ -26,6 +28,9 @@ class PhotoListDataModel {
     var thumbnailImageArray = [UIImage]()
     
     
+    //function that retrieves the specific image from url
+    //input url
+    //output UIImage
     func getImageByURL(imageURLString : String) -> UIImage {
         
         let url = URL(string: imageURLString)
