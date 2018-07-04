@@ -19,6 +19,7 @@
 		4CC679F820EA8D34009241B7 /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC679F720EA8D34009241B7 /* PhotoDetailViewController.swift */; };
 		4CC679FA20EA8D5E009241B7 /* AlbumListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC679F920EA8D5E009241B7 /* AlbumListTableViewCell.swift */; };
 		4CC679FC20EA8D91009241B7 /* PhotoListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC679FB20EA8D91009241B7 /* PhotoListCollectionViewCell.swift */; };
+		4CE46E6620ED04DA00DB4E23 /* AlbumListDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE46E6520ED04DA00DB4E23 /* AlbumListDataModel.swift */; };
 		EC3C98A65B98D95B858E2909 /* Pods_GerardusHermens_MMExercise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10BA1F6B0B28A58A6C928AB7 /* Pods_GerardusHermens_MMExercise.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,7 @@
 		4CC679F720EA8D34009241B7 /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
 		4CC679F920EA8D5E009241B7 /* AlbumListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListTableViewCell.swift; sourceTree = "<group>"; };
 		4CC679FB20EA8D91009241B7 /* PhotoListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListCollectionViewCell.swift; sourceTree = "<group>"; };
+		4CE46E6520ED04DA00DB4E23 /* AlbumListDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListDataModel.swift; sourceTree = "<group>"; };
 		668386F24EA0C060BA265637 /* Pods-GerardusHermens_MMExercise.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GerardusHermens_MMExercise.release.xcconfig"; path = "Pods/Target Support Files/Pods-GerardusHermens_MMExercise/Pods-GerardusHermens_MMExercise.release.xcconfig"; sourceTree = "<group>"; };
 		A0D32CCAB0569E5FD54DEFB4 /* Pods-GerardusHermens_MMExercise.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GerardusHermens_MMExercise.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GerardusHermens_MMExercise/Pods-GerardusHermens_MMExercise.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				4CC679F120EA8CE6009241B7 /* PhotoListDataModel.swift */,
+				4CE46E6520ED04DA00DB4E23 /* AlbumListDataModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			files = (
 				4CC679FA20EA8D5E009241B7 /* AlbumListTableViewCell.swift in Sources */,
 				4CC679F820EA8D34009241B7 /* PhotoDetailViewController.swift in Sources */,
+				4CE46E6620ED04DA00DB4E23 /* AlbumListDataModel.swift in Sources */,
 				4CC679F620EA8D16009241B7 /* PhotoListViewController.swift in Sources */,
 				4CC679FC20EA8D91009241B7 /* PhotoListCollectionViewCell.swift in Sources */,
 				4CC679F420EA8D02009241B7 /* AlbumListViewController.swift in Sources */,

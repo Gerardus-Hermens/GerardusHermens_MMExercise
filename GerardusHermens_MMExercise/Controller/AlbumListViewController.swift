@@ -17,21 +17,15 @@ class AlbumListViewController: UIViewController {
     //url fetching data from web
     let albumURL = "https://jsonplaceholder.typicode.com/albums"
     
+    //new instance of AlbumListDataModel
+    let albumListDM = AlbumListDataModel()
+    
     //variable used for segue to PhotoListViewController
     var albumIdForPhotolistVCSegue : Int = 0
     
     //new instance of UISearchBar
     let searchBar = UISearchBar()
     
-    // 2 arrays to store web data fetched via JSON
-    var albumIdArray = [Int]()
-    var albumTitleArray = [String]()
-    
-    // title array and variable for search function filteringt
-    var filteredAlbumIdArray = [Int]()
-    var filteredAlbumTitleArray = [String]()
-    var willShowSearchResults : Bool = false
-
     //IBOutlets
     @IBOutlet weak var albumTableView: UITableView!
     @IBOutlet weak var albumSearchBar: UISearchBar!
@@ -72,8 +66,8 @@ class AlbumListViewController: UIViewController {
         
         for idAndTitle in 0..<json[].count {
             
-            albumIdArray.append(json[idAndTitle]["id"].intValue)
-            albumTitleArray.append(json[idAndTitle]["title"].stringValue)
+            albumListDM.albumIdArray.append(json[idAndTitle]["id"].intValue)
+            albumListDM.albumTitleArray.append(json[idAndTitle]["title"].stringValue)
         }
         
         albumTableView.reloadData()
@@ -101,39 +95,38 @@ extension AlbumListViewController : UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        if willShowSearchResults {
-            return filteredAlbumTitleArray.count
+        if albumListDM.willShowSearchResults {
+            return albumListDM.filteredAlbumTitleArray.count
         } else {
-            return albumIdArray.count
+            return albumListDM.albumIdArray.count
         }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "albumcell", for: indexPath) as! AlbumListTableViewCell
         
-        if willShowSearchResults {
-            cell.albumIdLabel.text = String(albumIdArray[indexPath.row])
-//            cell.albumIdLabel.text = String(filteredAlbumIdArray[indexPath.row])
-            cell.albumTitleLabel.text = filteredAlbumTitleArray[indexPath.row]
+        if albumListDM.willShowSearchResults {
+            cell.albumIdLabel.text = String(albumListDM.albumIdArray[indexPath.row])
+            cell.albumTitleLabel.text = albumListDM.filteredAlbumTitleArray[indexPath.row]
             return cell
         } else {
-            cell.albumIdLabel.text = String(albumIdArray[indexPath.row])
-            cell.albumTitleLabel.text = albumTitleArray[indexPath.row]
+            cell.albumIdLabel.text = String(albumListDM.albumIdArray[indexPath.row])
+            cell.albumTitleLabel.text = albumListDM.albumTitleArray[indexPath.row]
             return cell
         }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        if willShowSearchResults {
-            for id in 0..<albumTitleArray.count {
-                if String(albumTitleArray[id]) == String(filteredAlbumTitleArray[indexPath.row]) {
+        if albumListDM.willShowSearchResults {
+            for id in 0..<albumListDM.albumTitleArray.count {
+                if String(albumListDM.albumTitleArray[id]) == String(albumListDM.filteredAlbumTitleArray[indexPath.row]) {
                     
-                    albumIdForPhotolistVCSegue = albumIdArray[id]
+                    albumIdForPhotolistVCSegue = albumListDM.albumIdArray[id]
                 }
             }
         } else {
-            albumIdForPhotolistVCSegue = albumIdArray[indexPath.row]
+            albumIdForPhotolistVCSegue = albumListDM.albumIdArray[indexPath.row]
         }
         
         performSegue(withIdentifier: "segueWithAlbumId", sender: self)
@@ -155,25 +148,25 @@ extension AlbumListViewController : UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
-        filteredAlbumTitleArray = albumTitleArray.filter({ (names: String) -> Bool in
+        albumListDM.filteredAlbumTitleArray = albumListDM.albumTitleArray.filter({ (names: String) -> Bool in
             
             return names.lowercased().range(of: searchText.lowercased()) != nil
         })
         
         if searchText != "" {
             
-            willShowSearchResults = true
+            albumListDM.willShowSearchResults = true
             self.albumTableView.reloadData()
         } else {
             
-            willShowSearchResults = false
+            albumListDM.willShowSearchResults = false
             self.albumTableView.reloadData()
         }
     }
     
     func scrollViewWillBeginDragging(scrollView: UIScrollView) {
         
-        willShowSearchResults = true
+        albumListDM.willShowSearchResults = true
         albumSearchBar.endEditing(true)
         self.albumTableView.reloadData()
     }
