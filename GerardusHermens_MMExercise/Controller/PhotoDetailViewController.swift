@@ -36,12 +36,15 @@ class PhotoDetailViewController: UIViewController {
     }
     
     
+    //function to load in the segued data into UILabels and UIImage
     func loadAllData() {
         
         photoImage.layer.cornerRadius = photoImage.bounds.width / 10
         photoImage.clipsToBounds = true
         
+        //calling method to turn url into image
         photoImage.image = photoDetailDM.getImageByURL(imageURLString: photoURL)
+        
         photoURLLabel.text = "\(photoURL)"
         titleLabel.text = "\(photoTitle)"
         albumIdLabel.text = "album: \(albumId)"

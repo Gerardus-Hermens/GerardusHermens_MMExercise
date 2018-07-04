@@ -86,6 +86,7 @@ class PhotoListViewController: UIViewController {
                 photoListDM.thumbnailURLArray.append(json[album]["thumbnailUrl"].stringValue)
                 photoListDM.photoURLArray.append(json[album]["url"].stringValue)
                 
+                //calling method to turn url into image and store in array for collectionview
                 let currentThumbNailImage = photoListDM.getImageByURL(imageURLString: json[album]["thumbnailUrl"].stringValue)
                 photoListDM.thumbnailImageArray.append(currentThumbNailImage)
             }
